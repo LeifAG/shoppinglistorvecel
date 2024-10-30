@@ -7,14 +7,14 @@
             "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
         }
     ],
-    "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/staticfiles/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "shoppinglistor/wsgi.py"
-        }
-    ]
+"routes": [
+    {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+    },
+    {
+        "src": "/(.*)",
+        "dest": "shoppinglistor/wsgi.py"
+    }
+]
 }
